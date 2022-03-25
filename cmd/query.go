@@ -1,4 +1,4 @@
-package query
+package cmd
 
 import (
 	"bufio"
@@ -13,16 +13,14 @@ var (
 	addVerb    = "add"
 	removeVerb = "remove"
 
-	// Cmd represents the add command
-	Cmd = &cobra.Command{
+	// Query represents the add command
+	Query = &cobra.Command{
 		Use:   "query",
-		Short: "A brief description of your command",
-		Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+		Short: "Modifies query parameters of a URL",
+		Long: `Query has two verbs:
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+query add key value - adds key value to query
+query remove key - removes key from query`,
 		Run: queryRun,
 	}
 )
