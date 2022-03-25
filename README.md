@@ -4,6 +4,14 @@ Pretty prints URLs if piped.
 
 Can `add` and `remove` from `query`.
 
+## Install
+
+`go` installs `uq` to `$GOBIN`:
+
+```bash
+$ go install
+```
+
 ## Example
 
 Pretty print:
